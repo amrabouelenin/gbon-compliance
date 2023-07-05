@@ -1,0 +1,39 @@
+#root {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  background-color: white;
+}
+
+.level1 {
+  width: 100%;
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+}
+
+.app-content {
+  /* display: flex;
+  flex-grow: 1; */
+  width: 82%;
+  margin: auto;
+}
+
+@media (max-width: 1310px) {
+  .app-content {
+    width: 90%;
+  }
+}
+
+@media (max-width: 1199px) {
+  .app-content {
+    width: 90%;
+  }
+}
+
+header,
+main,
+footer {
+  flex-shrink: 0;
+}

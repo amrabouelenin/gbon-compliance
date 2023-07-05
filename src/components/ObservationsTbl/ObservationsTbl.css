@@ -1,0 +1,16 @@
+.obstbl {
+    margin-top: 50px;
+    border: solid 1px;
+    position: relative;
+    clear: both;
+    width: 100%;
+}
+tr,td {
+    border: solid 1px;
+}
+.year_quarter_col {
+    width: 175px;
+}
+.th_bg {
+    background-color: lightblue;
+}

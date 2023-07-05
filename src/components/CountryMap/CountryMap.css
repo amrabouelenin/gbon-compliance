@@ -1,0 +1,61 @@
+.country-map {
+    width: 40%;
+    margin-top: 30px;
+    float: left;
+    /* position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;*/
+} 
+/* .mapboxgl-ctrl-bottom-right {
+    display: none;
+} */
+.mapboxgl-canvas {
+    border:solid 2px gray
+}
+.iconmap {
+    width: 10px;
+   
+}
+#map-container {
+    /* display: flex; */
+    height: 75%;
+    position: relative;
+    width: 35%;
+    float: left;
+  }
+  
+@media (max-width: 1199px) {
+    #map-container {
+        height: 80%;
+    }
+}
+
+@media (max-width: 768px) {
+    #map-container {
+        height: 95%;
+    }
+}
+#map {
+    /* position: absolute; */
+    /* top: 100px; */
+    bottom: 0;
+    width: 100%;
+    height: 400px;
+  }
+  
+.marker {
+background-color: red;
+width: 8px;
+height: 8px;
+border-radius: 50%;
+cursor: pointer;
+/* border: .5px solid white; */
+}
+.gbon_tool {
+position: relative;
+width: 45%;
+}
+.gbon_tool_txt {
+    margin-right: 50px;
+}

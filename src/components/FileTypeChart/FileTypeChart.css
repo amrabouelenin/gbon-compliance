@@ -1,0 +1,43 @@
+.ftype_chart {
+    float: left;
+    margin-top: 28px;
+    width: 62.5%;
+    height: 630px;
+    border: solid 1px gray;
+    margin-left: 18px;
+}
+.recharts-wrapper {
+    width: 300px !important;
+    height: 400px !important;
+
+
+}
+.chart_block {
+    
+    width: 49% !important;
+    float: left;
+    margin-left: -45px;
+}
+.chart_block h6 {
+    text-align: center;
+    margin-left: 65px;
+    
+}
+.separator {
+    border: solid 1px gray;
+    float: left;
+    height: 630px;
+    margin-left: 50px;
+}
+.summary_tbl {
+    position: relative;
+    margin-left: 71px;
+    margin-bottom: 20px;
+    float: left;
+}
+.compliance_txt {
+    margin-left: 71px;
+    margin-bottom: 14px;
+    text-align: left;
+    float: left;
+}

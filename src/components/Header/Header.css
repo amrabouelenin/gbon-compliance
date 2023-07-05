@@ -1,0 +1,81 @@
+.app-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f4f7fb;
+    height: 6%;
+    /* max-height: 6vh; */
+    padding: 0.5rem 10rem 0.5rem 10rem;
+    border-bottom: 0.5px solid #c6d2e1;
+    overflow: hidden;
+  }
+  
+  .app-header h1 {
+    font-size: 1.7rem;
+    color: #5b7897;
+    font-weight: bold;
+    margin: 0;
+    text-align: center;
+  }
+  .short-text {
+    display: none;
+  }
+  
+  #logo-wmo {
+    height: 80%;
+    display: block;
+    max-height: 80%;
+    max-width: 13%;
+    object-fit: contain;
+  }
+  
+  #logo-ecmwf {
+    height: 48%;
+    max-height: 48%;
+    display: block;
+    max-width: 18%;
+    object-fit: contain;
+  }
+  
+  @media (max-width: 1199px) {
+    .app-header {
+      padding: 0.5rem 6rem 0.5rem 6rem;
+    }
+  }
+  
+  @media (max-width: 991px) {
+    .app-header {
+      padding: 0.5rem 1rem 0.5rem 1rem;
+    }
+    #logo-wmo {
+      height: 75%;
+      max-height: 75%;
+      max-width: 13%;
+    }
+    #logo-ecmwf {
+      height: 40%;
+      max-height: 40%;
+      max-width: 18%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .app-header {
+      padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+    }
+    #logo-wmo {
+      height: 70%;
+      max-height: 70%;
+    }
+    #logo-ecmwf {
+      height: 32%;
+      max-height: 32%;
+    }
+    .short-text {
+      display: inline-block;
+    }
+    .full-text {
+      display: none;
+    }
+  }
+  
