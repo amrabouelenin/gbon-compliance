@@ -12,6 +12,9 @@ const CountryMap = (props) => {
   const key =
     "pk.eyJ1Ijoia3VydC1oZWN0aWMiLCJhIjoiY2loNGtsNzc0MHpvdHgxbTBxejQzOGVpZiJ9.NiOdnMqDcZKeR6Oxo7tWmw";
 
+  const MAPBOX_BACKGROUND_WDQMS =
+    "mapbox://styles/kurt-hectic/cj488lfn91qxh2rrz0nghg0y3";
+  const MAPBOX_STREET_BACKGROUND = "mapbox://styles/mapbox/streets-v12";
   mapboxgl.accessToken = key;
 
   var geojson = {
@@ -92,7 +95,7 @@ const CountryMap = (props) => {
   useEffect(() => {
     var map = new mapboxgl.Map({
       container: "map",
-      style: "mapbox://styles/mapbox/streets-v12",
+      style: MAPBOX_BACKGROUND_WDQMS,
       center: [78.96288, 20.593684],
       zoom: 4,
     });
@@ -114,7 +117,7 @@ const CountryMap = (props) => {
             "fill-opacity": 0.1,
           },
         },
-        "country-label"
+        "country-label-sm"
       );
       map.setFilter("country-boundaries", ["in", "iso_3166_1_alpha_3", "IND"]);
     });

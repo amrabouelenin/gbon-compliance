@@ -45,16 +45,16 @@
   }
   
 .marker {
-background-color: red;
-width: 8px;
-height: 8px;
-border-radius: 50%;
-cursor: pointer;
-/* border: .5px solid white; */
+    background-color: red;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: .5px solid white;
 }
 .gbon_tool {
-position: relative;
-width: 45%;
+    position: relative;
+    width: 45%;
 }
 .gbon_tool_txt {
     margin-right: 50px;
