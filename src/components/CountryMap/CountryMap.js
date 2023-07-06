@@ -1,8 +1,7 @@
-import React, { useState } from "react";
-import { useRef, useMemo, useCallback, useEffect } from "react";
+import React from "react";
+import { useEffect } from "react";
 
 import "./CountryMap.css";
-import Map, { Marker, NavigationControl } from "react-map-gl";
 import FileTypeTabs from "../FileTypeTabs/FileTypeTabs";
 import ObservationsTbl from "../ObservationsTbl/ObservationsTbl";
 
@@ -10,8 +9,6 @@ import mapboxgl from "mapbox-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
 
 const CountryMap = (props) => {
-  const popup = new mapboxgl.Popup();
-
   const key =
     "pk.eyJ1Ijoia3VydC1oZWN0aWMiLCJhIjoiY2loNGtsNzc0MHpvdHgxbTBxejQzOGVpZiJ9.NiOdnMqDcZKeR6Oxo7tWmw";
 
@@ -122,7 +119,7 @@ const CountryMap = (props) => {
       map.setFilter("country-boundaries", ["in", "iso_3166_1_alpha_3", "IND"]);
     });
 
-    let popup;
+    let popup = new mapboxgl.Popup();
     // create a HTML element for each feature
     var el = document.createElement("div");
     el.className = "marker";

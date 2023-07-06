@@ -132,24 +132,26 @@ const summaryTable = (message, status) => {
   return (
     <span>
       <table className="summary_tbl">
-        <tr className="th_bg">
-          <td colspan="2">Exemption granted</td>
-        </tr>
-        <tr className="th_bg">
-          <td>Area</td>
-          <td>Reasons</td>
-        </tr>
-        <tr>
-          <td>XY</td>
-          <td>Security</td>
-        </tr>
-        <tr>
-          <td>XZ</td>
-          <td>Topography</td>
-        </tr>
+        <tbody>
+          <tr className="th_bg">
+            <td colSpan={2}>Exemption granted</td>
+          </tr>
+          <tr className="th_bg">
+            <td>Area</td>
+            <td>Reasons</td>
+          </tr>
+          <tr>
+            <td>XY</td>
+            <td>Security</td>
+          </tr>
+          <tr>
+            <td>XZ</td>
+            <td>Topography</td>
+          </tr>
+        </tbody>
       </table>
       <div className="compliance_txt">
-        {message} <span class={badge_color}>{status}</span>
+        {message} <span className={badge_color}>{status}</span>
       </div>
     </span>
   );

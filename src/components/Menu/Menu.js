@@ -4,12 +4,17 @@ import { Menu } from "antd";
 import "./Menu.css";
 
 const AppMenu = (props) => {
-  return (
-    <Menu mode="horizontal" className="menu-top">
-      <Menu.Item key={1}>Home</Menu.Item>
-      <Menu.Item key={2}>Country Page</Menu.Item>
-    </Menu>
-  );
+  const menuItems = [
+    {
+      key: "home",
+      label: "Home",
+    },
+    {
+      key: "country_page",
+      label: "Country Page",
+    },
+  ];
+  return <Menu mode="horizontal" className="menu-top" items={menuItems}></Menu>;
 };
 
 export default AppMenu;

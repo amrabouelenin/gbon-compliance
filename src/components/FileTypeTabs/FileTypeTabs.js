@@ -7,12 +7,13 @@ const FileTypeTabs = (props) => {
   return (
     <div className="gbon_tool">
       <Tabs className={"ftype_tabs"}>
-        
         <TabList>
-        {/* <span className="gbon_tool_txt">GBON Compliance progress tool</span> */}
+          {/* <span className="gbon_tool_txt">GBON Compliance progress tool</span> */}
           <Tab>Surface</Tab>
           <Tab>Upper-Air</Tab>
         </TabList>
+        <TabPanel></TabPanel>
+        <TabPanel></TabPanel>
       </Tabs>
     </div>
   );
