@@ -1,16 +1,24 @@
 .obstbl {
-    margin-top: 50px;
+    margin-top: 5px;
     border: solid 1px;
     position: relative;
     clear: both;
     width: 100%;
+    /* font-size: .7rem; */
 }
 tr,td {
-    border: solid 1px;
+    /* border: solid 1px; */
+    text-align: center;
 }
 .year_quarter_col {
     width: 175px;
 }
 .th_bg {
-    background-color: lightblue;
+    background-color: #f4f6fb;
 }
+.obstbl_wrapper {
+    height: 104px;
+    overflow: auto;
+    margin-bottom: 10px;
+}
+

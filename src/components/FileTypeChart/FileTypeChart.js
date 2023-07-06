@@ -67,7 +67,7 @@ const FileTypeChart = (props) => {
         </h6>
         {tbl_1}
         <LineChart
-          width={370}
+          width={500}
           height={400}
           data={data}
           margin={{
@@ -83,43 +83,18 @@ const FileTypeChart = (props) => {
           <Tooltip />
           <Legend />
           <Line
-            type="monotone"
             dataKey="Surface"
             stroke="#8884d8"
             activeDot={{ r: 8 }}
           />
-        </LineChart>
-      </span>
-      <span className="separator"></span>
-      <span className="chart_block">
-        <h6>
-          Percentage of compliant stations 2021 Q1 - 2023 Q4 [% of target]
-        </h6>
-        {tbl_2}
-        <LineChart
-          width={370}
-          height={400}
-          data={data}
-          margin={{
-            top: 5,
-            right: 30,
-            left: 20,
-            bottom: 5,
-          }}
-        >
-          <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey="name" />
-          <YAxis />
-          <Tooltip />
-          <Legend />
           <Line
-            type="monotone"
             dataKey="UpperAir"
-            stroke="#82ca9d"
+            stroke="green"
             activeDot={{ r: 8 }}
           />
         </LineChart>
       </span>
+
     </div>
   );
 };
@@ -130,7 +105,7 @@ const summaryTable = (message, status) => {
     badge_color = "w3-badge w3-red";
   }
   return (
-    <span>
+    <div className="exmption_tbl">
       <table className="summary_tbl">
         <tbody>
           <tr className="th_bg">
@@ -153,7 +128,10 @@ const summaryTable = (message, status) => {
       <div className="compliance_txt">
         {message} <span className={badge_color}>{status}</span>
       </div>
-    </span>
+      <div className="compliance_txt">
+        {"UpperAir Compliance"} <span className={"w3-badge w3-green"}>{"Yes"}</span>
+      </div>
+    </div>
   );
 };
 

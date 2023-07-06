@@ -97,7 +97,7 @@ const CountryMap = (props) => {
       container: "map",
       style: MAPBOX_BACKGROUND_WDQMS,
       center: [78.96288, 20.593684],
-      zoom: 4,
+      zoom: 3,
     });
     map.addControl(new mapboxgl.FullscreenControl());
     map.addControl(new mapboxgl.NavigationControl());

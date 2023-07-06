@@ -10,7 +10,7 @@ const Header = props => {
       <h1 className="full-text">
         GBON COMPLIANCE
       </h1>
-      <img src={logoECMWF} id="logo-ecmwf" className="logo" alt="logo ECMWF" />
+      {/* <img src={logoECMWF} id="logo-ecmwf" className="logo" alt="logo ECMWF" /> */}
     </header>
   );
 };

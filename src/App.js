@@ -9,7 +9,7 @@ function App() {
   return (
     <div className="level1">
       <Header />
-      <AppMenu />
+      {/* <AppMenu /> */}
       <CountryPageFilters />
       <main className="app-content">
         {/* <Router /> */}

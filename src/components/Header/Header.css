@@ -8,6 +8,8 @@
     padding: 0.5rem 10rem 0.5rem 10rem;
     border-bottom: 0.5px solid #c6d2e1;
     overflow: hidden;
+    padding-top: 0rem;
+    padding-bottom: 0rem;
   }
   
   .app-header h1 {
@@ -27,6 +29,7 @@
     max-height: 80%;
     max-width: 13%;
     object-fit: contain;
+    height: 28px;
   }
   
   #logo-ecmwf {
