@@ -1,9 +1,10 @@
 .text_compliance {
     float: left;
-    margin-top: 16px;
+    margin-top: 34px;
     width: 60%;
     padding: 21px;
     padding-bottom:0px;
+    margin-bottom: 27px;
 }
 .text_compliance ul {
     margin-top: 0px;

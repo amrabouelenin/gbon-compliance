@@ -4,10 +4,35 @@
     width: 63%;
     /* ;
     height: 630px; */
-    border: solid 1px gray;
+    border: solid 1px lightblue;
     margin-left: 18px;
     margin-bottom: 5px;
     
+}
+@media (max-width: 1199px) {
+    .ftype_chart{
+        
+        width: 100%;
+        margin-left: 0px;
+    }
+    .text_compliance {
+        margin: 0px;
+        padding-top: 0px;
+    }
+    
+}
+
+@media (max-width: 768px) {
+    
+    .ftype_chart{
+        
+        width: 100%;
+        margin-left: 0px;
+    }
+    .text_compliance {
+        margin: 0px;
+        padding-top: 0px;
+    }
 }
 .recharts-wrapper {
     /* width: 300px !important;
@@ -61,4 +86,7 @@ margin-top: 15px;
     flex-flow: column;
     margin-left: 50px;
     margin-top: 40px;
+}
+.w3-badge {
+    border-radius: 25% !important;
 }

@@ -6,17 +6,17 @@ const ObservationsTbl = (props) => {
   return (
     <div className="obstbl_wrapper">
       <table className="obstbl">
+        <tr className="th_bg">
+          <td className="year_quarter_col">2022-Q3</td>
+          <td colSpan={3}>Observations</td>
+        </tr>
+        <tr className="th_bg">
+          <td>Station Name</td>
+          <td>Received</td>
+          <td>Target</td>
+          <td>Compliance</td>
+        </tr>
         <tbody>
-          <tr className="th_bg">
-            <td className="year_quarter_col">2022-Q3</td>
-            <td colSpan={3}>Observations</td>
-          </tr>
-          <tr className="th_bg">
-            <td>Station Name</td>
-            <td>Received</td>
-            <td>Target</td>
-            <td>Compliance</td>
-          </tr>
           <tr>
             <td>Station #1</td>
             <td>50</td>

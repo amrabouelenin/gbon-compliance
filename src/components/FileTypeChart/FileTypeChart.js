@@ -9,8 +9,8 @@ import {
   Tooltip,
   Legend,
 } from "recharts";
-import "./FileTypeChart.css";
 import "./w3.css";
+import "./FileTypeChart.css";
 
 const data = [
   {
@@ -62,9 +62,9 @@ const FileTypeChart = (props) => {
   return (
     <div className="ftype_chart">
       <span className="chart_block" id="chart_1">
-        <h6>
+        {/* <h6>
           Percentage of compliant stations 2021 Q1 - 2023 Q4 [% of target]
-        </h6>
+        </h6> */}
         {tbl_1}
         <LineChart
           width={500}
@@ -82,19 +82,10 @@ const FileTypeChart = (props) => {
           <YAxis />
           <Tooltip />
           <Legend />
-          <Line
-            dataKey="Surface"
-            stroke="#8884d8"
-            activeDot={{ r: 8 }}
-          />
-          <Line
-            dataKey="UpperAir"
-            stroke="green"
-            activeDot={{ r: 8 }}
-          />
+          <Line dataKey="Surface" stroke="#8884d8" activeDot={{ r: 8 }} />
+          <Line dataKey="UpperAir" stroke="green" activeDot={{ r: 8 }} />
         </LineChart>
       </span>
-
     </div>
   );
 };
@@ -129,7 +120,8 @@ const summaryTable = (message, status) => {
         {message} <span className={badge_color}>{status}</span>
       </div>
       <div className="compliance_txt">
-        {"UpperAir Compliance"} <span className={"w3-badge w3-green"}>{"Yes"}</span>
+        {"UpperAir Compliance"}{" "}
+        <span className={"w3-badge w3-green"}>{"Yes"}</span>
       </div>
     </div>
   );

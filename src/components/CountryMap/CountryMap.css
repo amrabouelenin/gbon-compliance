@@ -28,12 +28,14 @@
 @media (max-width: 1199px) {
     #map-container {
         height: 80%;
+        width: 100%;
     }
 }
 
 @media (max-width: 768px) {
     #map-container {
         height: 95%;
+        width: 100%;
     }
 }
 #map {

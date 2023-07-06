@@ -5,7 +5,29 @@
     /* margin-top: 13px; */
 }
 
-.react-tabs__tab--selected {
-    background: #f4f6fb;
-    font-weight: bold;
+
+.react-tabs__tab {
+    color: #bdbdbd;
+    background-color: #f0f0f0;
+    /* float: left; */
+    border: none;
+    outline: none;
+    cursor: pointer;
+    /* padding: 14px 16px; */
+    /* font-size: 17px; */
+    width: 50%;
 }
+.react-tabs__tab--selected {
+    /* background: #f4f6fb;
+    font-weight: bold; */
+    color: #1890ff;
+    background-color: #fff;
+    border-top: 1.5px solid #1890ff;
+}
+
+
+
+  
+.react-tabs__tab:hover {
+    background-color: #f4f7fb;
+  }

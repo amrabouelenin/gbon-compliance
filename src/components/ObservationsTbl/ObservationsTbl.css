@@ -1,6 +1,6 @@
 .obstbl {
     margin-top: 5px;
-    border: solid 1px;
+    /* border: solid 1px; */
     position: relative;
     clear: both;
     width: 100%;
@@ -17,8 +17,10 @@ tr,td {
     background-color: #f4f6fb;
 }
 .obstbl_wrapper {
-    height: 104px;
+    height: 122px;
     overflow: auto;
     margin-bottom: 10px;
+    border: solid 1px lightblue;
+    border-right: none;
 }
 
