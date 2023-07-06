@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/gbon-compliance/static/css/main.54be9e8c.css",
-    "main.js": "/gbon-compliance/static/js/main.29d70bfa.js",
-    "static/js/787.22cf684e.chunk.js": "/gbon-compliance/static/js/787.22cf684e.chunk.js",
+    "main.css": "/gbon-compliance/static/css/main.4f02d4f0.css",
+    "main.js": "/gbon-compliance/static/js/main.4e49aaa4.js",
+    "static/js/787.df92c1eb.chunk.js": "/gbon-compliance/static/js/787.df92c1eb.chunk.js",
     "static/media/logo_wmo.png": "/gbon-compliance/static/media/logo_wmo.413b5f1decf052878b83.png",
     "index.html": "/gbon-compliance/index.html",
-    "main.54be9e8c.css.map": "/gbon-compliance/static/css/main.54be9e8c.css.map",
-    "main.29d70bfa.js.map": "/gbon-compliance/static/js/main.29d70bfa.js.map",
-    "787.22cf684e.chunk.js.map": "/gbon-compliance/static/js/787.22cf684e.chunk.js.map"
+    "main.4f02d4f0.css.map": "/gbon-compliance/static/css/main.4f02d4f0.css.map",
+    "main.4e49aaa4.js.map": "/gbon-compliance/static/js/main.4e49aaa4.js.map",
+    "787.df92c1eb.chunk.js.map": "/gbon-compliance/static/js/787.df92c1eb.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.54be9e8c.css",
-    "static/js/main.29d70bfa.js"
+    "static/css/main.4f02d4f0.css",
+    "static/js/main.4e49aaa4.js"
   ]
 }
