@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/gbon-compliance/static/css/main.086b4339.css",
-    "main.js": "/gbon-compliance/static/js/main.69c66808.js",
+    "main.css": "/gbon-compliance/static/css/main.bbbafbcf.css",
+    "main.js": "/gbon-compliance/static/js/main.1bc6822a.js",
     "static/js/787.df92c1eb.chunk.js": "/gbon-compliance/static/js/787.df92c1eb.chunk.js",
     "static/media/logo_wmo.png": "/gbon-compliance/static/media/logo_wmo.413b5f1decf052878b83.png",
     "index.html": "/gbon-compliance/index.html",
-    "main.086b4339.css.map": "/gbon-compliance/static/css/main.086b4339.css.map",
-    "main.69c66808.js.map": "/gbon-compliance/static/js/main.69c66808.js.map",
+    "main.bbbafbcf.css.map": "/gbon-compliance/static/css/main.bbbafbcf.css.map",
+    "main.1bc6822a.js.map": "/gbon-compliance/static/js/main.1bc6822a.js.map",
     "787.df92c1eb.chunk.js.map": "/gbon-compliance/static/js/787.df92c1eb.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.086b4339.css",
-    "static/js/main.69c66808.js"
+    "static/css/main.bbbafbcf.css",
+    "static/js/main.1bc6822a.js"
   ]
 }
