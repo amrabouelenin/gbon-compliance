@@ -22,6 +22,12 @@
     
 }
 
+.chart_title {
+    margin-left: 71px;
+    padding-bottom: 0px;
+    margin-top: 10px;
+    float: left;
+}
 @media (max-width: 768px) {
     
     .ftype_chart{
@@ -88,5 +94,5 @@ margin-top: 15px;
     margin-top: 40px;
 }
 .w3-badge {
-    border-radius: 25% !important;
+    border-radius: 8% !important;
 }

@@ -8,10 +8,10 @@ const CountryPage = (props) => {
     <div>
       <CountryMap />
       <div className="text_compliance">
-        Status for Q2/2023 : <b>non-compliant​</b>
+        Status for Q2/2023 : <span className={"w3-badge w3-red"}>{"non-compliant"}</span>
         <ul>
-          <li>Surface: compliant (HZ: 200 km^2)​</li>
-          <li>Upper-air: non-compliant (HZ: 2000 km^2)​</li>
+          <li>Surface: compliant (HZ: 200 km<sup>2</sup>)​</li>
+          <li>Upper-air: non-compliant (HZ: 2000 km<sup>2</sup>)​</li>
         </ul>
       </div>
       <FileTypeChart />

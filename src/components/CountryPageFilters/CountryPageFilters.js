@@ -4,7 +4,7 @@ import "./CountryPageFilters.css";
 const CountryPageFilters = (props) => {
   return (
     <>
-      <div className="title-map">GBON Compliance Progress Tool</div>
+      <div className="title-map">GBON Compliance Monitoring App</div>
       <div id="menu" className="country-page-filter">
         <span className="menu-element select-countries">
           <label htmlFor="countries">Member:</label>

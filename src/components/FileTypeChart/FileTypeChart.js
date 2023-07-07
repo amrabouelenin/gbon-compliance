@@ -62,11 +62,10 @@ const FileTypeChart = (props) => {
   return (
     <div className="ftype_chart">
       <span className="chart_block" id="chart_1">
-        {/* <h6>
-          Percentage of compliant stations 2021 Q1 - 2023 Q4 [% of target]
-        </h6> */}
         {tbl_1}
+        <span className="chart_title">Evolution of horizontal resolution, in percent</span>
         <LineChart
+          title={"Evolution of horizontal resolution, in percent"}
           width={500}
           height={400}
           data={data}
@@ -77,9 +76,10 @@ const FileTypeChart = (props) => {
             bottom: 5,
           }}
         >
+          
           <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey="name" />
-          <YAxis />
+          <XAxis label={''} dataKey="name"  />
+          <YAxis unit={'%'} label={{ value: 'Percent of target resolution', angle: -90, position: 'Left' }} />
           <Tooltip />
           <Legend />
           <Line dataKey="Surface" stroke="#8884d8" activeDot={{ r: 8 }} />
