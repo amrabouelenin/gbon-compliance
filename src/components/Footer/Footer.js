@@ -13,7 +13,7 @@ const Footer = (props) => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          {process.env.REACT_APP_VERSION} 1.4.1
+          {process.env.REACT_APP_VERSION} 0.1
         </a>
       </span>
     </footer>

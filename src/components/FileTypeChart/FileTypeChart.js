@@ -16,7 +16,7 @@ const data = [
   {
     name: "Q1",
     UpperAir: 40,
-    Surface: 24,
+    Surface: 150,
     amt: 2400,
   },
   {
@@ -52,7 +52,7 @@ const data = [
   {
     name: "Q3",
     UpperAir: 34,
-    Surface: 43,
+    Surface: 190,
     amt: 2100,
   },
 ];
@@ -63,7 +63,9 @@ const FileTypeChart = (props) => {
     <div className="ftype_chart">
       <span className="chart_block" id="chart_1">
         {tbl_1}
-        <span className="chart_title">Evolution of horizontal resolution, in percent</span>
+        <span className="chart_title">
+          Evolution of horizontal resolution, in percent
+        </span>
         <LineChart
           title={"Evolution of horizontal resolution, in percent"}
           width={500}
@@ -76,12 +78,19 @@ const FileTypeChart = (props) => {
             bottom: 5,
           }}
         >
-          
           <CartesianGrid strokeDasharray="3 3" />
-          <XAxis label={''} dataKey="name"  />
-          <YAxis unit={'%'} label={{ value: 'Percent of target resolution', angle: -90, position: 'Left' }} />
+          <XAxis label={""} dataKey="name" />
+          <YAxis
+            unit={"%"}
+            label={{
+              value: "Percent of target resolution",
+              position: "insideLeft",
+              angle: -90,
+              dy: 90,
+            }}
+          />
           <Tooltip />
-          <Legend />
+          <Legend verticalAlign="top" height={36} />
           <Line dataKey="Surface" stroke="#8884d8" activeDot={{ r: 8 }} />
           <Line dataKey="UpperAir" stroke="green" activeDot={{ r: 8 }} />
         </LineChart>
