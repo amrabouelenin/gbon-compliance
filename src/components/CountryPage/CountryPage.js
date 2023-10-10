@@ -10,8 +10,8 @@ const CountryPage = (props) => {
       <div className="text_compliance">
         Status for Q2/2023 : <span className={"w3-badge w3-red"}>{"non-compliant"}</span>
         <ul>
-          <li>Surface: compliant (HZ: 200 km<sup>2</sup>)​</li>
-          <li>Upper-air: non-compliant (HZ: 2000 km<sup>2</sup>)​</li>
+          <li className={"li_surface"}>Surface: compliant (HZ: 200 km<sup>2</sup>)​</li>
+          <li className={"li_temp"}>Upper-air: non-compliant (HZ: 2000 km<sup>2</sup>)​</li>
         </ul>
       </div>
       <FileTypeChart />

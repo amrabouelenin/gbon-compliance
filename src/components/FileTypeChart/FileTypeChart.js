@@ -16,7 +16,7 @@ const data = [
   {
     name: "Q1",
     UpperAir: 40,
-    Surface: 150,
+    Surface: 70,
     amt: 2400,
   },
   {
@@ -52,29 +52,29 @@ const data = [
   {
     name: "Q3",
     UpperAir: 34,
-    Surface: 190,
+    Surface: 90,
     amt: 2100,
   },
 ];
 const FileTypeChart = (props) => {
-  let tbl_1 = summaryTable("Surface Compliance", "No");
-  let tbl_2 = summaryTable("Upper-Air Compliance", "Yes");
+  // let tbl_1 = summaryTable("Surface Compliance", "No");
+  // let tbl_2 = summaryTable("Upper-Air Compliance", "Yes");
   return (
     <div className="ftype_chart">
       <span className="chart_block" id="chart_1">
-        {tbl_1}
+        {/* {tbl_1} */}
         <span className="chart_title">
           Evolution of horizontal resolution, in percent
         </span>
         <LineChart
           title={"Evolution of horizontal resolution, in percent"}
-          width={500}
-          height={400}
+          width={600}
+          height={500}
           data={data}
           margin={{
             top: 5,
-            right: 30,
-            left: 20,
+            // right: 30,
+            // left: 20,
             bottom: 5,
           }}
         >

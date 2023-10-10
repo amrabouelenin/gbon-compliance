@@ -15,6 +15,20 @@ const CountryPageFilters = (props) => {
             <option value="Canada">Canada</option>
           </select>
         </span>
+        <span className="menu-element select-countries">
+          <label htmlFor="resolution">Resolution:</label>
+          <select className="select-css" id="menu-countries" name="countries">
+            <option value="standard">Standard</option>
+            <option value="high-density">High-density</option>
+          </select>
+        </span>
+        <span className="menu-element select-countries">
+          <label htmlFor="baseline">Baseline:</label>
+          <select className="select-css" id="menu-countries" name="countries">
+            <option value="GBON">GBON</option>
+            <option value="all_stations">All stations</option>
+          </select>
+        </span>
         <span className="menu-element select-quarter">
           <label htmlFor="quarter">Quarter:</label>
           <select className="select-css" id="menu-quarter" name="quarter">

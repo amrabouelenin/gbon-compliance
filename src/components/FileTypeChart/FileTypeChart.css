@@ -1,106 +1,98 @@
 .ftype_chart {
-    float: left;
-    margin-top: 4px;
-    width: 63%;
-    /* ;
+  float: left;
+  margin-top: 4px;
+  width: 63%;
+  /* ;
     height: 630px; */
-    border: solid 1px lightblue;
-    margin-left: 18px;
-    margin-bottom: 5px;
-    
+  border: solid 1px lightblue;
+  margin-left: 18px;
+  margin-bottom: 5px;
 }
 @media (max-width: 1199px) {
-    .ftype_chart{
-        
-        width: 100%;
-        margin-left: 0px;
-    }
-    .text_compliance {
-        margin: 0px;
-        padding-top: 0px;
-    }
-    
+  .ftype_chart {
+    width: 100%;
+    margin-left: 0px;
+  }
+  .text_compliance {
+    margin: 0px;
+    padding-top: 0px;
+  }
 }
 
 .chart_title {
-    margin-left: 71px;
-    padding-bottom: 0px;
-    margin-top: 10px;
-    float: left;
+  margin-left: 71px;
+  padding-bottom: 0px;
+  margin-top: 10px;
+  float: left;
 }
 
 .recharts-wrapper {
-    /* width: 300px !important;
+  /* width: 300px !important;
     height: 400px !important; */
-float: left;
-height: 300px !important;
-margin-left: -49px;
-margin-top: 15px;
-
+  float: left;
+  /* height: 300px !important; */
+  margin-left: -49px;
+  margin-top: 15px;
 }
 .recharts-surface {
-    /* width: 300px; */
-    height: 300px;
+  /* width: 300px; */
+  /* height: 300px; */
 }
 .recharts-legend-item .recharts-surface {
-    width: auto;
-    height: auto;
+  width: auto;
+  height: auto;
 }
 .chart_block {
-    
-    /* width: 49% !important; */
-    float: left;
-    margin-left: -45px;
+  /* width: 49% !important; */
+  float: left;
+  margin-left: -45px;
 }
 .chart_block h6 {
-    text-align: center;
-    margin-left: 65px;
-    
+  text-align: center;
+  margin-left: 65px;
 }
 .separator {
-    border: solid 1px gray;
-    float: left;
-    height: 630px;
-    margin-left: 50px;
+  border: solid 1px gray;
+  float: left;
+  height: 630px;
+  margin-left: 50px;
 }
 .summary_tbl {
-    position: relative;
-    margin-left: 71px;
-    margin-bottom: 20px;
-    float: left;
+  position: relative;
+  margin-left: 71px;
+  margin-bottom: 20px;
+  float: left;
 }
 .compliance_txt {
-    margin-left: 71px;
-    margin-bottom: 14px;
-    text-align: left;
-    float: left;
+  margin-left: 71px;
+  margin-bottom: 14px;
+  text-align: left;
+  float: left;
 }
 .exmption_tbl {
-    float: left;
-    display: flex;
-    flex-flow: column;
-    margin-left: 50px;
-    margin-top: 40px;
+  float: left;
+  display: flex;
+  flex-flow: column;
+  margin-left: 50px;
+  margin-top: 40px;
 }
 .w3-badge {
-    border-radius: 8% !important;
+  border-radius: 8% !important;
 }
 
 @media (max-width: 768px) {
-    
-    .ftype_chart{
-        
-        width: 100%;
-        margin-left: 0px;
-    }
-    .text_compliance {
-        margin: 0px;
-        padding-top: 0px;
-        width: 100%;
-    }
-    .recharts-wrapper {
-        float: left;
-        height: 300px !important;
-        margin-left: -32px;
-    }
+  .ftype_chart {
+    width: 100%;
+    margin-left: 0px;
+  }
+  .text_compliance {
+    margin: 0px;
+    padding-top: 0px;
+    width: 100%;
+  }
+  .recharts-wrapper {
+    float: left;
+    height: 300px !important;
+    margin-left: -32px;
+  }
 }

@@ -6,6 +6,13 @@
     width: 60%;
 }
 .text_compliance ul {
-    margin-top: 0px;
+    margin-top: 20px;
     margin-bottom: 0px;
+}
+.li_surface {
+    float: left;
+    margin-right: 39px;
+}
+.li_temp {
+    float: left;
 }

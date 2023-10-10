@@ -6,4 +6,7 @@
   max-height: 2.5vh;
   padding: 4px;
   border-top: 0.5px solid #c6d2e1;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
 }

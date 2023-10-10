@@ -102,26 +102,101 @@ const CountryMap = (props) => {
     map.addControl(new mapboxgl.FullscreenControl());
     map.addControl(new mapboxgl.NavigationControl());
 
-    map.on("load", function () {
-      map.addLayer(
-        {
-          id: "country-boundaries",
-          source: {
-            type: "vector",
-            url: "mapbox://mapbox.country-boundaries-v1",
-          },
-          "source-layer": "country_boundaries",
-          type: "fill",
-          paint: {
-            "fill-color": "#d2361e",
-            "fill-opacity": 0.1,
-          },
+    map.on("load", () => {
+      // Add a custom vector tileset source. This tileset contains
+      // point features representing museums. Each feature contains
+      // three properties. For example:
+      // {
+      //     alt_name: "Museo Arqueologico",
+      //     name: "Museo Inka",
+      //     tourism: "museum"
+      // }
+      map.addSource("Upper-Air", {
+        type: "vector",
+        url: "mapbox://mapbox.2opop9hr",
+      });
+      map.addLayer({
+        id: "Upper-Air",
+        type: "circle",
+        source: "Upper-Air",
+        layout: {
+          // Make the layer visible by default.
+          visibility: "visible",
         },
-        "country-label-sm"
-      );
-      map.setFilter("country-boundaries", ["in", "iso_3166_1_alpha_3", "IND"]);
+        paint: {
+          "circle-radius": 8,
+          "circle-color": "rgba(55,148,179,1)",
+        },
+        "source-layer": "Upper-Air",
+      });
+
+      // Add the Mapbox Terrain v2 vector tileset. Read more about
+      // the structure of data in this tileset in the documentation:
+      // https://docs.mapbox.com/vector-tiles/reference/mapbox-terrain-v2/
+      map.addSource("surface", {
+        type: "vector",
+        url: "mapbox://mapbox.mapbox-terrain-v2",
+      });
+      map.addLayer({
+        id: "surface",
+        type: "line",
+        source: "surface",
+        "source-layer": "surface",
+        layout: {
+          // Make the layer visible by default.
+          visibility: "visible",
+          "line-join": "round",
+          "line-cap": "round",
+        },
+        paint: {
+          "line-color": "#877b59",
+          "line-width": 1,
+        },
+      });
     });
 
+    map.on("idle", () => {
+      // If these two layers were not added to the map, abort
+
+      // Enumerate ids of the layers.
+      const toggleableLayerIds = ["Upper-Air", "surface"];
+
+      // Set up the corresponding toggle button for each layer.
+      for (const id of toggleableLayerIds) {
+        // Skip layers that already have a button set up.
+        if (document.getElementById(id)) {
+          continue;
+        }
+
+        // Create a link.
+        const link = document.createElement("a");
+        link.id = id;
+        link.href = "#";
+        link.textContent = id;
+        link.className = "active";
+
+        // Show or hide layer when the toggle is clicked.
+        link.onclick = function (e) {
+          const clickedLayer = this.textContent;
+          e.preventDefault();
+          e.stopPropagation();
+
+          const visibility = map.getLayoutProperty(clickedLayer, "visibility");
+
+          // Toggle layer visibility by changing the layout object's visibility property.
+          if (visibility === "visible") {
+            map.setLayoutProperty(clickedLayer, "visibility", "none");
+            this.className = "";
+          } else {
+            this.className = "active";
+            map.setLayoutProperty(clickedLayer, "visibility", "visible");
+          }
+        };
+
+        const layers = document.getElementById("menu_toggle");
+        layers.appendChild(link);
+      }
+    });
     let popup = new mapboxgl.Popup();
     // create a HTML element for each feature
     var el = document.createElement("div");
@@ -143,7 +218,8 @@ const CountryMap = (props) => {
 
   return (
     <div id="map-container">
-      <FileTypeTabs />
+      {/* <FileTypeTabs /> */}
+      <nav id="menu_toggle"></nav>
       <div id="map"></div>
       <ObservationsTbl />
     </div>
