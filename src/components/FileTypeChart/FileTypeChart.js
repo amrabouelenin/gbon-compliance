@@ -63,18 +63,18 @@ const FileTypeChart = (props) => {
     <div className="ftype_chart">
       <span className="chart_block" id="chart_1">
         {/* {tbl_1} */}
-        <span className="chart_title">
+        {/* <span className="chart_title">
           Evolution of horizontal resolution, in percent
-        </span>
+        </span> */}
         <LineChart
           title={"Evolution of horizontal resolution, in percent"}
-          width={600}
-          height={500}
+          width={950}
+          height={520}
           data={data}
           margin={{
             top: 5,
             // right: 30,
-            // left: 20,
+            left: 120,
             bottom: 5,
           }}
         >
