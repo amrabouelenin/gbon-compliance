@@ -61,6 +61,18 @@ const FileTypeChart = (props) => {
   // let tbl_2 = summaryTable("Upper-Air Compliance", "Yes");
   return (
     <div className="ftype_chart">
+      {/* <div className="text_compliance">
+        Status for Q2/2023 :{" "}
+        <span className={"w3-badge w3-red"}>{"non-compliant"}</span>
+        <ul>
+          <li className={"li_surface"}>
+            Surface: compliant (HZ: 200 km<sup>2</sup>)​
+          </li>
+          <li className={"li_temp"}>
+            Upper-air: non-compliant (HZ: 2000 km<sup>2</sup>)​
+          </li>
+        </ul>
+      </div> */}
       <span className="chart_block" id="chart_1">
         {/* {tbl_1} */}
         {/* <span className="chart_title">
@@ -68,8 +80,8 @@ const FileTypeChart = (props) => {
         </span> */}
         <LineChart
           title={"Evolution of horizontal resolution, in percent"}
-          width={950}
-          height={520}
+          width={650}
+          height={200}
           data={data}
           margin={{
             top: 5,
