@@ -77,7 +77,7 @@ const CountryMap = (props) => {
         },
         geometry: {
           type: "Point",
-          coordinates: [91.25, 23.88333],
+          coordinates: [83.25, 23.88333],
         },
       },
       {
@@ -92,6 +92,235 @@ const CountryMap = (props) => {
       },
     ],
   };
+
+  var geojson_1 = {
+    type: "FeatureCollection",
+    features: [
+      {
+        type: "Feature",
+        properties: {
+          description: "Station #1",
+        },
+        geometry: {
+          type: "Point",
+          coordinates: [74.82, 25.11667],
+        },
+      },
+      {
+        type: "Feature",
+        properties: {
+          description: "Station #2",
+        },
+        geometry: {
+          type: "Point",
+          coordinates: [75.73333, 20.6],
+        },
+      },
+      {
+        type: "Feature",
+        properties: {
+          description: "Station #3",
+        },
+        geometry: {
+          type: "Point",
+          coordinates: [77.35, 23.27333],
+        },
+      },
+      {
+        type: "Feature",
+        properties: {
+          description: "Station #4",
+        },
+        geometry: {
+          type: "Point",
+          coordinates: [77.58333, 12.16667],
+        },
+      },
+      {
+        type: "Feature",
+        properties: {
+          description: "Station #5",
+        },
+        geometry: {
+          type: "Point",
+          coordinates: [72.63333, 23.56667],
+        },
+      },
+      {
+        type: "Feature",
+        properties: {
+          description: "Station #6",
+        },
+        geometry: {
+          type: "Point",
+          coordinates: [78.25, 23.88333],
+        },
+      },
+      {
+        type: "Feature",
+        properties: {
+          description: "Station #7",
+        },
+        geometry: {
+          type: "Point",
+          coordinates: [78.16288, 20.493684],
+        },
+      },
+    ],
+  };
+
+  var geojson_2 = {
+    type: "FeatureCollection",
+    features: [
+      {
+        type: "Feature",
+        properties: {
+          description: "Station #1",
+        },
+        geometry: {
+          type: "Point",
+          coordinates: [73.85, 19.11667],
+        },
+      },
+      {
+        type: "Feature",
+        properties: {
+          description: "Station #2",
+        },
+        geometry: {
+          type: "Point",
+          coordinates: [74.83333, 23.25],
+        },
+      },
+      {
+        type: "Feature",
+        properties: {
+          description: "Station #3",
+        },
+        geometry: {
+          type: "Point",
+          coordinates: [76.35, 23.28333],
+        },
+      },
+      {
+        type: "Feature",
+        properties: {
+          description: "Station #4",
+        },
+        geometry: {
+          type: "Point",
+          coordinates: [76.58333, 12.96667],
+        },
+      },
+      {
+        type: "Feature",
+        properties: {
+          description: "Station #5",
+        },
+        geometry: {
+          type: "Point",
+          coordinates: [79.63333, 23.66667],
+        },
+      },
+      {
+        type: "Feature",
+        properties: {
+          description: "Station #6",
+        },
+        geometry: {
+          type: "Point",
+          coordinates: [73.25, 23.88333],
+        },
+      },
+      {
+        type: "Feature",
+        properties: {
+          description: "Station #7",
+        },
+        geometry: {
+          type: "Point",
+          coordinates: [80.96288, 50.593684],
+        },
+      },
+    ],
+  };
+
+  var geojson_3 = {
+    type: "FeatureCollection",
+    features: [
+      {
+        type: "Feature",
+        properties: {
+          description: "Station #1",
+        },
+        geometry: {
+          type: "Point",
+          coordinates: [75.85, 19.11667],
+        },
+      },
+      {
+        type: "Feature",
+        properties: {
+          description: "Station #2",
+        },
+        geometry: {
+          type: "Point",
+          coordinates: [74.83333, 20.25],
+        },
+      },
+      {
+        type: "Feature",
+        properties: {
+          description: "Station #3",
+        },
+        geometry: {
+          type: "Point",
+          coordinates: [76.35, 23.28333],
+        },
+      },
+      {
+        type: "Feature",
+        properties: {
+          description: "Station #4",
+        },
+        geometry: {
+          type: "Point",
+          coordinates: [76.58333, 12.96667],
+        },
+      },
+      {
+        type: "Feature",
+        properties: {
+          description: "Station #5",
+        },
+        geometry: {
+          type: "Point",
+          coordinates: [71.63333, 23.06667],
+        },
+      },
+      {
+        type: "Feature",
+        properties: {
+          description: "Station #6",
+        },
+        geometry: {
+          type: "Point",
+          coordinates: [87.25, 23.88333],
+        },
+      },
+      {
+        type: "Feature",
+        properties: {
+          description: "Station #7",
+        },
+        geometry: {
+          type: "Point",
+          coordinates: [82.96288, 20.593684],
+        },
+      },
+    ],
+  };
+
   useEffect(() => {
     var map = new mapboxgl.Map({
       container: "map",
@@ -206,6 +435,45 @@ const CountryMap = (props) => {
     geojson.features.forEach(function (marker) {
       el = document.createElement("div");
       el.className = "marker";
+      popup = new mapboxgl.Popup()
+        .setLngLat(marker.geometry.coordinates)
+        .setText(marker.properties.description);
+      new mapboxgl.Marker(el)
+        .setLngLat(marker.geometry.coordinates)
+        .setPopup(popup)
+        .addTo(map);
+    });
+
+    // add markers to map
+    geojson_1.features.forEach(function (marker) {
+      el = document.createElement("div");
+      el.className = "marker_1";
+      popup = new mapboxgl.Popup()
+        .setLngLat(marker.geometry.coordinates)
+        .setText(marker.properties.description);
+      new mapboxgl.Marker(el)
+        .setLngLat(marker.geometry.coordinates)
+        .setPopup(popup)
+        .addTo(map);
+    });
+
+    // add markers to map
+    geojson_2.features.forEach(function (marker) {
+      el = document.createElement("div");
+      el.className = "marker_2";
+      popup = new mapboxgl.Popup()
+        .setLngLat(marker.geometry.coordinates)
+        .setText(marker.properties.description);
+      new mapboxgl.Marker(el)
+        .setLngLat(marker.geometry.coordinates)
+        .setPopup(popup)
+        .addTo(map);
+    });
+
+    // add markers to map
+    geojson_3.features.forEach(function (marker) {
+      el = document.createElement("div");
+      el.className = "marker_3";
       popup = new mapboxgl.Popup()
         .setLngLat(marker.geometry.coordinates)
         .setText(marker.properties.description);

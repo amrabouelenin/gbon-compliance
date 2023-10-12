@@ -12,53 +12,10 @@ import {
 import "./w3.css";
 import "./FileTypeChart.css";
 
-const data = [
-  {
-    name: "Q1",
-    UpperAir: 40,
-    Surface: 70,
-    amt: 2400,
-  },
-  {
-    name: "Q2",
-    UpperAir: 30,
-    Surface: 13,
-    amt: 2210,
-  },
-  {
-    name: "Q3",
-    UpperAir: 20,
-    Surface: 98,
-    amt: 2290,
-  },
-  {
-    name: "Q4",
-    UpperAir: 100,
-    Surface: 39,
-    amt: 2000,
-  },
-  {
-    name: "Q1",
-    UpperAir: 18,
-    Surface: 48,
-    amt: 2181,
-  },
-  {
-    name: "Q2",
-    UpperAir: 23.9,
-    Surface: 38,
-    amt: 2500,
-  },
-  {
-    name: "Q3",
-    UpperAir: 34,
-    Surface: 90,
-    amt: 2100,
-  },
-];
-const FileTypeChart = (props) => {
+const FileTypeChart = (props, data) => {
   // let tbl_1 = summaryTable("Surface Compliance", "No");
   // let tbl_2 = summaryTable("Upper-Air Compliance", "Yes");
+
   return (
     <div className="ftype_chart">
       {/* <div className="text_compliance">
@@ -82,7 +39,7 @@ const FileTypeChart = (props) => {
           title={"Evolution of horizontal resolution, in percent"}
           width={650}
           height={200}
-          data={data}
+          data={props.date}
           margin={{
             top: 5,
             // right: 30,

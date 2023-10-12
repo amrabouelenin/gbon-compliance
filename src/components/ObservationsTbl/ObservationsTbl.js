@@ -59,6 +59,37 @@ const ObservationsTbl = (props) => {
             <td>60</td>
             <td>61.4%</td>
           </tr>
+
+          <tr>
+            <td>Station #8</td>
+            <td>50</td>
+            <td>60</td>
+            <td>61.4%</td>
+          </tr>
+          <tr>
+            <td>Station #9</td>
+            <td>50</td>
+            <td>60</td>
+            <td>61.4%</td>
+          </tr>
+          <tr>
+            <td>Station #10</td>
+            <td>50</td>
+            <td>60</td>
+            <td>61.4%</td>
+          </tr>
+          <tr>
+            <td>Station #11</td>
+            <td>50</td>
+            <td>60</td>
+            <td>61.4%</td>
+          </tr>
+          <tr>
+            <td>Station #12</td>
+            <td>50</td>
+            <td>60</td>
+            <td>61.4%</td>
+          </tr>
         </tbody>
       </table>
     </div>

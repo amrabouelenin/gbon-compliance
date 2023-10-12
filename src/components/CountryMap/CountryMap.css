@@ -1,8 +1,8 @@
 .country-map {
-    width: 40%;
-    margin-top: 30px;
-    float: left;
-    /* position: absolute;
+  width: 40%;
+  margin-top: 30px;
+  float: left;
+  /* position: absolute;
     top: 0;
     bottom: 0;
     width: 100%;*/
@@ -12,102 +12,125 @@
     display: none;
 } */
 .mapboxgl-canvas {
-    border: solid 2px gray
+  border: solid 2px gray;
 }
 
 .iconmap {
-    width: 10px;
-
+  width: 10px;
 }
 
 #map-container {
-    /* display: flex; */
-    /* height: 75%; */
-    position: relative;
-    width: 35%;
-    float: left;
+  /* display: flex; */
+  /* height: 75%; */
+  position: relative;
+  width: 35%;
+  float: left;
 }
 
 @media (max-width: 1199px) {
-    #map-container {
-        height: 80%;
-        width: 100%;
-    }
+  #map-container {
+    height: 80%;
+    width: 100%;
+  }
 }
 
 @media (max-width: 768px) {
-    #map-container {
-        height: 95%;
-        width: 100%;
-    }
+  #map-container {
+    height: 95%;
+    width: 100%;
+  }
 }
 
 #map {
-    /* position: absolute; */
-    /* top: 100px; */
-    bottom: 0;
-    width: 100%;
-    height: 500px;
-    top: 34px;
-    z-index: 100;
+  /* position: absolute; */
+  /* top: 100px; */
+  bottom: 0;
+  width: 100%;
+  height: 500px;
+  top: 34px;
+  z-index: 100;
 }
 
 .marker {
-    background-color: red;
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    cursor: pointer;
-    border: .5px solid white;
+  background-color: red;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  cursor: pointer;
+  /* border: .5px solid white; */
 }
 
+.marker_1 {
+  background-color: green;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  cursor: pointer;
+  /* border: .5px solid white; */
+}
+.marker_2 {
+  background-color: orange;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  cursor: pointer;
+  /* border: .5px solid white; */
+}
+.marker_3 {
+  background-color: black;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  cursor: pointer;
+  /* border: .5px solid white; */
+}
 .gbon_tool {
-    position: relative;
-    width: 45%;
+  position: relative;
+  width: 45%;
 }
 
 .gbon_tool_txt {
-    margin-right: 50px;
+  margin-right: 50px;
 }
 
 #menu_toggle {
-    background: #fff;
-    position: absolute;
-    z-index: 1000;
-    top: 190px;
-    right: 10px;
-    border-radius: 3px;
-    width: 69px;
-    border: 1px solid rgba(0, 0, 0, 0.4);
-    font-family: 'Open Sans', sans-serif;
+  background: #fff;
+  position: absolute;
+  z-index: 1000;
+  top: 190px;
+  right: 10px;
+  border-radius: 3px;
+  width: 69px;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  font-family: "Open Sans", sans-serif;
 }
 
 #menu_toggle a {
-    font-size: 10px;
-    color: #404040;
-    display: block;
-    margin: 0;
-    padding: 0;
-    padding: 10px;
-    text-decoration: none;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
-    text-align: center;
+  font-size: 10px;
+  color: #404040;
+  display: block;
+  margin: 0;
+  padding: 0;
+  padding: 10px;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+  text-align: center;
 }
 
 #menu_toggle a:last-child {
-    border: none;
+  border: none;
 }
 
 #menu_toggle a:hover {
-    background-color: #f8f8f8;
-    color: #404040;
+  background-color: #f8f8f8;
+  color: #404040;
 }
 
 #menu_toggle a.active {
-    background-color: #3887be;
-    color: #ffffff;
+  background-color: #3887be;
+  color: #ffffff;
 }
 
 #menu_toggle a.active:hover {
-    background: #3074a4;
+  background: #3074a4;
 }
