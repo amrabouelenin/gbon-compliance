@@ -1,8 +1,45 @@
 import React from "react";
+import { useState, useEffect } from "react";
 
 import "./ObservationsTbl.css";
 
+import { apiEndpoint } from "../../Api.js";
+
 const ObservationsTbl = (props) => {
+  // console.log(props.props);
+  const [stations, setStations] = useState([]);
+  useEffect(() => {
+    let iso3 = props.props.params.country;
+    let quarter = props.props.params.quarter;
+    let year = props.props.params.year;
+    let baseline = props.props.params.baseline.toLowerCase();
+
+    let url =
+      apiEndpoint +
+      `/stations_obs?iso3=${iso3}&quarter=${quarter}&year=${year}&baseline=${baseline}`;
+    (async () => {
+      const data = await fetch(url).then((res) => res.json());
+      setStations(data);
+    })();
+  }, []);
+
+  let obsStations = [];
+
+  for (let i = 0; i < stations.length; i++) {
+    let compliance_percent =
+      (stations[i]["received"] / stations[i]["target"]) * 100;
+    compliance_percent = Math.round(compliance_percent * 100) / 100;
+    obsStations.push(
+      <tr key={i}>
+        <td>{stations[i]["wigosid"]}</td>
+        <td>{stations[i]["name"]}</td>
+        <td>{stations[i]["received"]}</td>
+        <td>{stations[i]["target"]}</td>
+        <td>{compliance_percent}%</td>
+      </tr>
+    );
+  }
+  // console.log(obsStations)
   return (
     <div className="obstbl_wrapper">
       <table className="obstbl">
@@ -10,87 +47,16 @@ const ObservationsTbl = (props) => {
           <td className="year_quarter_col">2022-Q3</td>
           <td colSpan={3}>Observations</td>
         </tr> */}
-        <tr className="th_bg">
-          <td>Station Name</td>
-          <td>Received</td>
-          <td>Target</td>
-          <td>Compliance</td>
-        </tr>
-        <tbody>
+        <thead className="th_bg">
           <tr>
-            <td>Station #1</td>
-            <td>50</td>
-            <td>70</td>
-            <td>71.4%</td>
+            <td>wigosid</td>
+            <td>Station Name</td>
+            <td>Received</td>
+            <td>Target</td>
+            <td>Compliance</td>
           </tr>
-          <tr>
-            <td>Station #2</td>
-            <td>50</td>
-            <td>80</td>
-            <td>79.4%</td>
-          </tr>
-          <tr>
-            <td>Station #3</td>
-            <td>50</td>
-            <td>60</td>
-            <td>61.4%</td>
-          </tr>
-          <tr>
-            <td>Station #4</td>
-            <td>50</td>
-            <td>60</td>
-            <td>61.4%</td>
-          </tr>
-          <tr>
-            <td>Station #5</td>
-            <td>50</td>
-            <td>60</td>
-            <td>61.4%</td>
-          </tr>
-          <tr>
-            <td>Station #6</td>
-            <td>50</td>
-            <td>60</td>
-            <td>61.4%</td>
-          </tr>
-          <tr>
-            <td>Station #7</td>
-            <td>50</td>
-            <td>60</td>
-            <td>61.4%</td>
-          </tr>
-
-          <tr>
-            <td>Station #8</td>
-            <td>50</td>
-            <td>60</td>
-            <td>61.4%</td>
-          </tr>
-          <tr>
-            <td>Station #9</td>
-            <td>50</td>
-            <td>60</td>
-            <td>61.4%</td>
-          </tr>
-          <tr>
-            <td>Station #10</td>
-            <td>50</td>
-            <td>60</td>
-            <td>61.4%</td>
-          </tr>
-          <tr>
-            <td>Station #11</td>
-            <td>50</td>
-            <td>60</td>
-            <td>61.4%</td>
-          </tr>
-          <tr>
-            <td>Station #12</td>
-            <td>50</td>
-            <td>60</td>
-            <td>61.4%</td>
-          </tr>
-        </tbody>
+        </thead>
+        <tbody>{obsStations}</tbody>
       </table>
     </div>
   );

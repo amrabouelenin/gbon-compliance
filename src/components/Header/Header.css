@@ -26,19 +26,16 @@
   #logo-wmo {
     height: 80%;
     display: block;
-    max-height: 80%;
-    max-width: 13%;
+    /* max-height: 80%;
+    max-width: 13%; */
     object-fit: contain;
     height: 28px;
   }
   
-  #logo-ecmwf {
-    height: 48%;
-    max-height: 48%;
-    display: block;
-    max-width: 18%;
-    object-fit: contain;
-  }
+  img#logo-wmo {
+    height: 32px;
+    width: auto;
+}
   
   @media (max-width: 1199px) {
     .app-header {

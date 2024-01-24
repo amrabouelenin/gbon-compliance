@@ -51,7 +51,7 @@
   z-index: 100;
 }
 
-.marker {
+.red_marker {
   background-color: red;
   width: 8px;
   height: 8px;
@@ -60,7 +60,7 @@
   /* border: .5px solid white; */
 }
 
-.marker_1 {
+.green_marker {
   background-color: green;
   width: 8px;
   height: 8px;
@@ -68,7 +68,7 @@
   cursor: pointer;
   /* border: .5px solid white; */
 }
-.marker_2 {
+.orange_marker {
   background-color: orange;
   width: 8px;
   height: 8px;
@@ -76,7 +76,7 @@
   cursor: pointer;
   /* border: .5px solid white; */
 }
-.marker_3 {
+.black_marker {
   background-color: black;
   width: 8px;
   height: 8px;
@@ -133,4 +133,13 @@
 
 #menu_toggle a.active:hover {
   background: #3074a4;
+}
+
+.link-oscar {
+  color: #3887be;
+  text-decoration: none;
+}
+a.link-oscar:after {
+  content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAQElEQVR42qXKwQkAIAxDUUdxtO6/RBQkQZvSi8I/pL4BoGw/XPkh4XigPmsUgh0626AjRsgxHTkUThsG2T/sIlzdTsp52kSS1wAAAABJRU5ErkJggg==);
+  margin: 0 3px 0 5px;
 }

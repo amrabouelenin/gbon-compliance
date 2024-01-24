@@ -1,0 +1,11 @@
+.home_image {
+  width: 800px;
+  height: auto;
+  float: left;
+  margin-left: 300px;
+}
+.home_right {
+  width: 25%;
+  float: left;
+  padding-top: 10%;
+}

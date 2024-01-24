@@ -2,11 +2,11 @@
   display: flex;
   justify-content: space-between;
   background-color: #f4f7fb;
-  height: 2.5%;
   max-height: 2.5vh;
   padding: 4px;
   border-top: 0.5px solid #c6d2e1;
   position: absolute;
-  bottom: 0px;
+  bottom: 0;
   width: 100%;
+  height: 50px;
 }
