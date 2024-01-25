@@ -1,5 +1,5 @@
 {
-  "homepage": "http://amrabouelenin.github.io/gbon-compliance",
+  "homepage": "/",
   "name": "gbon-compliance",
   "version": "0.1.0",
   "private": true,
@@ -35,7 +35,7 @@
   "browserslist": {
     "production": [
       ">1%",
-      "not ie <= 10",
+      "not ie <= 10",merged
       "safari >= 11",
       "chrome >= 63",
       "firefox >= 65",
