@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/gbon-compliance/static/css/main.6cf7a1ba.css",
-    "main.js": "/gbon-compliance/static/js/main.b2f5c6b8.js",
+    "main.js": "/gbon-compliance/static/js/main.a46ffc6d.js",
     "static/js/787.df92c1eb.chunk.js": "/gbon-compliance/static/js/787.df92c1eb.chunk.js",
     "static/media/compliance.png": "/gbon-compliance/static/media/compliance.96dc1d0a1d1bc2f849d1.png",
     "static/media/logo_wmo.png": "/gbon-compliance/static/media/logo_wmo.413b5f1decf052878b83.png",
     "index.html": "/gbon-compliance/index.html",
     "main.6cf7a1ba.css.map": "/gbon-compliance/static/css/main.6cf7a1ba.css.map",
-    "main.b2f5c6b8.js.map": "/gbon-compliance/static/js/main.b2f5c6b8.js.map",
+    "main.a46ffc6d.js.map": "/gbon-compliance/static/js/main.a46ffc6d.js.map",
     "787.df92c1eb.chunk.js.map": "/gbon-compliance/static/js/787.df92c1eb.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.6cf7a1ba.css",
-    "static/js/main.b2f5c6b8.js"
+    "static/js/main.a46ffc6d.js"
   ]
 }
