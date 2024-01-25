@@ -36,11 +36,14 @@ const Home = (props) => {
   const handleChange = (e) => {
     console.log(e.target.value);
     var member_selected = e.target.value;
-    props.history.replace(
-      "gbon-compliance/country/map/" +
-        member_selected +
-        "/standard/GBON/Q3/2023"
-    );
+    // props.history.replace(
+    //   "gbon-compliance/country/map/" +
+    //     member_selected +
+    //     "/standard/GBON/Q3/2023"
+    // );
+    window.location.href =
+      window.location.origin +
+      `/gbon-compliance/country/map/${member_selected}/standard/GBON/Q3/2023`;
   };
 
   // Get the list of members as a dropdown

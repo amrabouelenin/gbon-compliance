@@ -8,7 +8,7 @@ import mapboxgl from "mapbox-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
 import countriesCentroids from "./country-centroids.json";
 import { apiEndpoint } from "../../Api.js";
-
+import { useParams } from "react-router";
 
 function getCountryCenter(iso3) {
   for (let i = 0; i < countriesCentroids.length; i++) {
@@ -30,11 +30,12 @@ const CountryMap = (props) => {
   const MAPBOX_STREET_BACKGROUND = "mapbox://styles/mapbox/streets-v12";
   mapboxgl.accessToken = key;
   const [stations, setStations] = useState([]);
+  const params = useParams();
   useEffect(() => {
-    let iso3 = props.props.params.country;
-    let quarter = props.props.params.quarter;
-    let year = props.props.params.year;
-    let baseline = props.props.params.baseline.toLowerCase();
+    let iso3 = params.country;
+    let quarter = params.quarter;
+    let year = params.year;
+    let baseline = params.baseline.toLowerCase();
 
     let url =
       apiEndpoint +
@@ -46,20 +47,20 @@ const CountryMap = (props) => {
     })();
   }, []);
 
-  let center = getCountryCenter(props.props.params.country);
+  let center = getCountryCenter(params.country);
 
   useEffect(() => {
     var zoom = 3;
-    if (["USA", "CAN", "RUS"].includes(props.props.params.country)) {
+    if (["USA", "CAN", "RUS"].includes(params.country)) {
       zoom = 1;
     }
-    if (["CHN"].includes(props.props.params.country)) {
+    if (["CHN"].includes(params.country)) {
       zoom = 2;
     }
-    if (["QAT", 'CHE', 'FJI', 'CZE'].includes(props.props.params.country)) {
+    if (["QAT", 'CHE', 'FJI', 'CZE'].includes(params.country)) {
       zoom = 5;
     }
-    if (["DEU"].includes(props.props.params.country)) {
+    if (["DEU"].includes(params.country)) {
       zoom = 4;
     }
     var map = new mapboxgl.Map({
@@ -205,7 +206,7 @@ const CountryMap = (props) => {
       {/* <FileTypeTabs /> */}
       <nav id="menu_toggle"></nav>
       <div id="map"></div>
-      <ObservationsTbl props={props.props} />
+      <ObservationsTbl props={props} />
     </div>
   );
 };

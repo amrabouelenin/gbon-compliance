@@ -4,15 +4,17 @@ import { useState, useEffect } from "react";
 import "./ObservationsTbl.css";
 
 import { apiEndpoint } from "../../Api.js";
+import { useParams } from "react-router";
 
 const ObservationsTbl = (props) => {
   // console.log(props.props);
+  const params = useParams();
   const [stations, setStations] = useState([]);
   useEffect(() => {
-    let iso3 = props.props.params.country;
-    let quarter = props.props.params.quarter;
-    let year = props.props.params.year;
-    let baseline = props.props.params.baseline.toLowerCase();
+    let iso3 = params.country;
+    let quarter = params.quarter;
+    let year = params.year;
+    let baseline = params.baseline.toLowerCase();
 
     let url =
       apiEndpoint +

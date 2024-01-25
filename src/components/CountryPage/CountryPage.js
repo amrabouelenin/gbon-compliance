@@ -10,17 +10,21 @@ import reducer from "../reducers"; // Import the reducer
 import CountryPageFilters from "../CountryPageFilters/CountryPageFilters";
 
 import { apiEndpoint } from "../../Api";
+import { useParams } from 'react-router';
 
 // http://127.0.0.1:5000/api/1.0/member_status?iso3=BLR&quarter=3&year=2023&baseline=gbon&resolution=standard
 
 const CountryPage = (props) => {
   const [memberStatus, setMemberStatus] = useState([]);
   const [timeseriesData, setTimeseriesData] = useState([]);
-  let iso3 = props.params.country;
-  let quarter = props.params.quarter;
-  let year = props.params.year;
-  let baseline = props.params.baseline.toLowerCase();
-  let resolution = props.params.resolution.toLowerCase();
+  const params= useParams()
+
+  console.log(params);
+  let iso3 = params.country;
+  let quarter = params.quarter;
+  let year = params.year;
+  let baseline = params.baseline.toLowerCase();
+  let resolution = params.resolution.toLowerCase();
   let chartData = [];
   let p = <div></div>;
   // get compliance information for that member country

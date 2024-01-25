@@ -1,15 +1,15 @@
 import React from "react";
-import { Route, Redirect, Router, Switch } from "react-router-dom";
+import { Route, Redirect, Router, Routes } from "react-router-dom";
 
 import Home from "../components/Home/Home";
 
 const AppRouter = () => {
   return (
     <Router>
-      <Switch>
-        <Route path="/gbon-compliance" exact component={Home} />
-        <Route path="/" exact component={Home} />
-      </Switch>
+      <Routes>
+        <Route path="/gbon-compliance" element={<Home />} exact />
+        <Route path="/" element={<Home />} exact />
+      </Routes>
     </Router>
   );
 };

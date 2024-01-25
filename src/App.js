@@ -6,7 +6,7 @@ import CountryPage from "./components/CountryPage/CountryPage";
 import Footer from "./components/Footer/Footer";
 import CountryPageFilters from "./components/CountryPageFilters/CountryPageFilters";
 import AppRouter from "./AppRouter";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./components/Home/Home";
 
 function App() {
@@ -14,15 +14,16 @@ function App() {
     <div className="level1">
       <Header />
       <Router>
-        <Switch>
+        <Routes>
           <Route
             path="/gbon-compliance/country/map/:country/:resolution/:baseline/:quarter/:year"
             exact
-            render={(props) => <CountryPage params={props.match.params} />}
+            // render={(props) => <CountryPage params={props.match.params} />}
+            element={<CountryPage/>}
           />
-          <Route path="/gbon-compliance" exact component={Home} />
-          <Route path="/" exact component={Home} />
-        </Switch>
+          <Route path="/gbon-compliance" exact element={<Home />} />
+          <Route path="/" element={<Home />} exact />
+        </Routes>
       </Router>
       {/* <CountryPageFilters /> */}
       <main className="app-content">{/* <CountryPage /> */}</main>

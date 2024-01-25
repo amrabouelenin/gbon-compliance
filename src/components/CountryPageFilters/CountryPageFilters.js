@@ -4,7 +4,7 @@ import reducer from "../reducers"; // Import the reducer
 import { useReducer } from "react";
 import { useState, useEffect } from "react";
 import { apiEndpoint } from "../../Api";
-
+import { useParams } from "react-router";
 // get the list of members as a dropdown
 function getCountriesListHtml(elements, members, iso3) {
   for (let i = 0; i < members.length; i++) {
@@ -58,11 +58,12 @@ function getListResolutionHtml(elements, options, selected_option) {
 
 const CountryPageFilters = (props) => {
   const [members, setMembers] = useState([]);
-  let iso3 = props.props.params.country;
-  let resolution = props.props.params.resolution;
-  let baseline = props.props.params.baseline;
-  let quarter = props.props.params.quarter;
-  let year = props.props.params.year;
+  const params = useParams();
+  let iso3 = params.country;
+  let resolution = params.resolution;
+  let baseline = params.baseline;
+  let quarter = params.quarter;
+  let year = params.year;
 
   useEffect(() => {
     (async () => {
@@ -71,11 +72,7 @@ const CountryPageFilters = (props) => {
       );
       setMembers(data);
     })();
-    // iso3 = props.props.params.country;
-    // resolution = props.props.params.resolution;
-    // baseline = props.props.params.baseline;
-    // quarter = props.props.params.quarter;
-    // year = props.props.params.year;
+
   }, []);
 
   // Get the list of members
