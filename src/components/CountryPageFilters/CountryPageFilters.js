@@ -118,21 +118,21 @@ const CountryPageFilters = (props) => {
     console.log(e.target.value);
     window.location.href =
       window.location.origin +
-      `/gbon-compliance/country/map/${e.target.value}/${resolution}/${baseline}/${quarter}/${year}`;
+      `/country/map/${e.target.value}/${resolution}/${baseline}/${quarter}/${year}`;
   };
   // Handle the change of resolution filter
   const handleResolutionChange = (e) => {
     console.log(e.target.value);
     window.location.href =
       window.location.origin +
-      `/gbon-compliance/country/map/${iso3}/${e.target.value}/${baseline}/${quarter}/${year}`;
+      `/country/map/${iso3}/${e.target.value}/${baseline}/${quarter}/${year}`;
   };
   // Handle the change of baseline filter
   const handleBaselineChange = (e) => {
     console.log(e.target.value);
     window.location.href =
       window.location.origin +
-      `/gbon-compliance/country/map/${iso3}/${resolution}/${e.target.value}/${quarter}/${year}`;
+      `/country/map/${iso3}/${resolution}/${e.target.value}/${quarter}/${year}`;
   };
   // Handle the change of quarter filter
   const handleQuarterChange = (e) => {
@@ -140,14 +140,14 @@ const CountryPageFilters = (props) => {
     // quarter = e.target.value.replace("Q", "q");
     window.location.href =
       window.location.origin +
-      `/gbon-compliance/country/map/${iso3}/${resolution}/${baseline}/${e.target.value}/${year}`;
+      `/country/map/${iso3}/${resolution}/${baseline}/${e.target.value}/${year}`;
   };
   // Handle the change of year filter
   const handleYearChange = (e) => {
     console.log(e.target.value);
     window.location.href =
       window.location.origin +
-      `/gbon-compliance/country/map/${iso3}/${resolution}/${baseline}/${quarter}/${e.target.value}`;
+      `/country/map/${iso3}/${resolution}/${baseline}/${quarter}/${e.target.value}`;
   };
 
   return (

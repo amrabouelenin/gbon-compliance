@@ -16,12 +16,12 @@ function App() {
       <Router>
         <Routes>
           <Route
-            path="/gbon-compliance/country/map/:country/:resolution/:baseline/:quarter/:year"
+            path="/country/map/:country/:resolution/:baseline/:quarter/:year"
             exact
             // render={(props) => <CountryPage params={props.match.params} />}
             element={<CountryPage/>}
           />
-          <Route path="/gbon-compliance" exact element={<Home />} />
+          {/* <Route path="/gbon-compliance" exact element={<Home />} /> */}
           <Route path="/" element={<Home />} exact />
         </Routes>
       </Router>

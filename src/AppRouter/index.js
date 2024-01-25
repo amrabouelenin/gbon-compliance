@@ -7,7 +7,7 @@ const AppRouter = () => {
   return (
     <Router>
       <Routes>
-        <Route path="/gbon-compliance" element={<Home />} exact />
+        {/* <Route path="/gbon-compliance" element={<Home />} exact /> */}
         <Route path="/" element={<Home />} exact />
       </Routes>
     </Router>

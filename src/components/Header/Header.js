@@ -6,7 +6,7 @@ import logoECMWF from "../../images/logos/logo_ecmwf.png";
 const Header = (props) => {
   return (
     <header className="app-header">
-      <a href="/gbon-compliance">
+      <a href="/">
         <img src={logoWMO} id="logo-wmo" className="logo" alt="logo WMO" />
       </a>
 
