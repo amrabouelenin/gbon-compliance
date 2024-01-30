@@ -127,7 +127,7 @@ const CountryPage = (props) => {
         <div>
           <CountryMap props={props} />
           <div className="placeholer_info">{p} </div>
-          <FileTypeChart date={chartData} props={props} />
+          <FileTypeChart data={chartData} props={props} />
         </div>
       </main>
     </>

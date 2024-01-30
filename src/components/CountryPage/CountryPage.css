@@ -20,10 +20,10 @@
 }
 .placeholer_info {
     float: left;
-    width: 23%;
+    /* width: 25%; */
     margin-top: 41px;
     /* margin-left: 35px; */
-    margin-right: 10px;
+    /* margin-right: 10px; */
     text-align: justify;
     font-size: small;
 }

@@ -14,8 +14,9 @@
 }
 
 .app-content {
-  /* display: flex;
-  flex-grow: 1; */
+  display: flex;
+  /* flex-grow: 1; */
+  justify-content: center;
   width: 82%;
   margin: auto;
 }

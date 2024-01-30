@@ -46,7 +46,7 @@ const Home = (props) => {
   elements = getCountriesListHtml(elements, members);
   return (
     <div>
-      <div key={"home-filter"} id="menu" className="country-page-filter">
+      <div key={"home-filter"} id="menu" className="country-page-filter-home">
         <span className="menu-element select-countries">
           <label htmlFor="countries">Member:</label>
           <select

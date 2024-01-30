@@ -1,11 +1,11 @@
 .ftype_chart {
   float: left;
   margin-top: 36px;
-  width: 40%;
+  /* width: 40%; */
   /* ;
     height: 630px; */
   border: solid 1px lightblue;
-  margin-left: 18px;
+  margin-left: 20px;
   margin-bottom: 5px;
 }
 @media (max-width: 1199px) {
@@ -20,7 +20,7 @@
 }
 
 .chart_title {
-  margin-left: 71px;
+  /* margin-left: 71px; */
   padding-bottom: 0px;
   margin-top: 10px;
   float: left;
@@ -34,10 +34,7 @@
   margin-left: -49px;
   margin-top: 15px;
 }
-.recharts-surface {
-  /* width: 300px; */
-  /* height: 300px; */
-}
+
 .recharts-legend-item .recharts-surface {
   width: auto;
   height: auto;
@@ -45,11 +42,11 @@
 .chart_block {
   /* width: 49% !important; */
   float: left;
-  margin-left: -45px;
+  /* margin-left: -45px; */
 }
 .chart_block h6 {
   text-align: center;
-  margin-left: 65px;
+  /* margin-left: 65px; */
 }
 .separator {
   border: solid 1px gray;

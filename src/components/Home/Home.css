@@ -1,11 +1,22 @@
 .home_image {
-  width: 800px;
+  /* width: 800px; */
+  /* height: 500px; */
   height: auto;
   float: left;
-  margin-left: 300px;
+  /* margin-left: 300px; */
+  /* width: 70%; */
 }
 .home_right {
   width: 25%;
   float: left;
   padding-top: 10%;
+}
+.country-page-filter-home {
+  float: none;
+}
+.home_content {
+  display: flex;
+  flex: wrap;
+  justify-content: center;
+  margin-top: 24px;
 }
